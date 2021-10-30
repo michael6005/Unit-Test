@@ -1,4 +1,4 @@
-from enum import Enum, IntEnum
+from enum import IntEnum
 
 class Suit(IntEnum):
     Diamond = 1
@@ -23,7 +23,7 @@ class Value(IntEnum):
 
 class Card:
     # A class that describes a card and compares cards by value and suit
-    def __init__(self,suit: Suit,value: Value):
+    def __init__(self, suit: Suit, value: Value):
         self.value = value
         self.suit = suit
 
@@ -34,4 +34,4 @@ class Card:
         if self.value == other.value:
             return self.suit > other.suit
         else:
-            self.value > other.value
+            return self.value > other.value
