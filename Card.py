@@ -30,7 +30,7 @@ class Card:
     def __repr__(self):
         return f'{self.value}, {self.suit}'
     
-    def __gt__(self, other: Card):     
+    def __gt__(self, other):     
         if self.value == other.value:
             return self.suit > other.suit
         else:
